@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity, ShieldAlert, Cpu, Zap, Radio } from 'lucide-react';
+import { Activity, AlertTriangle, Cpu, Zap, Radio } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -76,7 +76,7 @@ export default function Manifiesto() {
             className="bg-magenta text-white p-6 tech-shadow"
           >
             <h2 className="font-black mb-4 uppercase flex items-center gap-2 text-black">
-              <ShieldAlert size={20} /> Sector FINAL: YOU_DIED.EXE
+              <AlertTriangle size={20} /> Sector FINAL: YOU_DIED.EXE
             </h2>
             <p className="font-bold">
               Al final, todos somos archivos temporales. La pregunta es: ¿vas a ser una copia perfecta o un fragmento de código que el sistema no puede ignorar? Únete al colapso. Bienvenido a NinetyWear.

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Activity, UserPlus, Loader2, AlertTriangle, ShieldCheck } from "lucide-react";
+import { Activity, UserPlus, Loader2, AlertTriangle, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function RegisterPage() {
@@ -51,7 +51,7 @@ export default function RegisterPage() {
     return (
       <div className="min-h-screen pt-40 flex items-center justify-center bg-void text-bone font-mono">
         <div className="border-4 border-lime p-12 text-center tech-shadow bg-void max-w-md">
-          <ShieldCheck size={64} className="mx-auto text-lime mb-6" />
+          <CheckCircle size={64} className="mx-auto text-lime mb-6" />
           <h2 className="text-3xl font-black uppercase mb-4 tracking-tighter">REGISTRO_EXITOSO</h2>
           <p className="text-xs text-mist uppercase tracking-widest mb-8">Tu identidad ha sido verificada. Redirigiendo al portal de acceso...</p>
           <div className="w-full bg-ash h-1">

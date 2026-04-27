@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useAuthStore } from "@/store/authStore";
 import { login } from "@/services/woocommerce/auth";
 import { useRouter } from "next/navigation";
-import { Activity, ShieldKeyhole, Loader2, AlertTriangle } from "lucide-react";
+import { Activity, Lock, Loader2, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 
 export default function LoginPage() {
@@ -40,7 +40,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md border-4 border-bone p-8 md:p-12 tech-shadow relative overflow-hidden">
         {/* Background Glitch Decoration */}
         <div className="absolute top-0 right-0 p-2 opacity-10 pointer-events-none">
-          <ShieldKeyhole size={120} />
+          <Lock size={120} />
         </div>
 
         <div className="relative z-10">

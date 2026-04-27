@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useCartStore } from "@/store/cartStore";
 import Image from "next/image";
 import Link from "next/link";
-import { Activity, ShieldCheck, CreditCard, ChevronRight, Loader2, ExternalLink } from "lucide-react";
+import { Activity, CheckCircle, CreditCard, ChevronRight, Loader2, ExternalLink } from "lucide-react";
 import { wcFetch } from "@/services/woocommerce/client";
 
 export default function CheckoutPage() {
@@ -39,7 +39,7 @@ export default function CheckoutPage() {
     return (
       <div className="min-h-screen pt-40 px-6 flex flex-col items-center justify-center text-center bg-void">
         <div className="border-4 border-lime p-12 max-w-2xl bg-void tech-shadow">
-          <ShieldCheck size={80} className="mx-auto text-lime mb-6 animate-pulse" />
+          <CheckCircle size={80} className="mx-auto text-lime mb-6 animate-pulse" />
           <h1 className="text-4xl md:text-6xl font-black text-bone uppercase tracking-tighter mb-4">ORDEN_GENERADA</h1>
           <p className="font-mono text-mist mb-8 uppercase tracking-widest text-sm">Tu pedido ha sido registrado en el núcleo. Para completar el pago de forma segura, accede a nuestra pasarela oficial.</p>
           
