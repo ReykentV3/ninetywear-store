@@ -8,7 +8,7 @@ import type { WCProduct, WCVariation } from "@/services/woocommerce/types";
 import { useCartStore } from "@/store/cartStore";
 import { getProductVariations } from "@/services/woocommerce/products";
 
-export default function ProductGrid({ products }: { products: WCProduct[] }) {
+export default function ProductGrid({ products, showTitle = true }: { products: WCProduct[], showTitle?: boolean }) {
   const [activeCategory, setActiveCategory] = useState('ALL_FILES - TODOS');
   
   const categories = ['ALL_FILES - TODOS', ...Array.from(new Set(products.map(p => p.categories?.[0]?.name?.toUpperCase() || 'TEES')))];
@@ -21,16 +21,18 @@ export default function ProductGrid({ products }: { products: WCProduct[] }) {
   return (
     <section id="logs" className="py-24 md:py-32 px-4 md:px-8 border-t-2 border-current bg-transparent relative transition-colors duration-500">
         <div className="max-w-7xl mx-auto relative z-10">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-                <div className="text-bone">
-                    <div className="font-mono text-[10px] md:text-xs text-magenta mb-2 flex items-center gap-2">
-                        <Activity size={14} /> NEW_UPLOADS_DETECTED
-                    </div>
-                    <h2 className="text-4xl md:text-8xl font-black uppercase tracking-tighter leading-none">
-                        Terminal <br className="md:hidden"/> Store
-                    </h2>
-                </div>
-            </div>
+            {showTitle && (
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                  <div className="text-bone">
+                      <div className="font-mono text-[10px] md:text-xs text-magenta mb-2 flex items-center gap-2">
+                          <Activity size={14} /> NEW_UPLOADS_DETECTED
+                      </div>
+                      <h2 className="text-4xl md:text-8xl font-black uppercase tracking-tighter leading-none">
+                          Terminal <br className="md:hidden"/> Store
+                      </h2>
+                  </div>
+              </div>
+            )}
 
             {/* STORE FILTERS */}
             <div className="flex border-2 border-current mb-12 tech-shadow overflow-x-auto whitespace-nowrap bg-void text-bone">
