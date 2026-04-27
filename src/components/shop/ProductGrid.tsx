@@ -91,7 +91,9 @@ function ProductCard({ product }: { product: WCProduct }) {
         qty: 1,
         image: product.images[0]?.src || '',
         size: 'N/A',
-        color: 'N/A'
+        color: 'N/A',
+        printifyVariantId: null,
+        slug: product.slug
       });
     }
   };
@@ -108,7 +110,9 @@ function ProductCard({ product }: { product: WCProduct }) {
       qty: 1,
       image: v.image?.src || product.images[0]?.src || '',
       size,
-      color
+      color,
+      printifyVariantId: null, // Placeholder to fix build
+      slug: product.slug
     });
     setIsSelecting(false);
   };
