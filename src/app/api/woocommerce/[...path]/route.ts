@@ -6,13 +6,14 @@ const WC_CONSUMER_SECRET = process.env.WC_CONSUMER_SECRET;
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ path: string[] }> }
+  { params }: { params: any }
 ) {
   if (!WC_API_URL || !WC_CONSUMER_KEY || !WC_CONSUMER_SECRET) {
     return NextResponse.json({ error: "WooCommerce API not configured" }, { status: 500 });
   }
 
-  const { path } = await params;
+  const resolvedParams = await params;
+  const path = resolvedParams.path as string[];
   const endpoint = path.join("/");
   const searchParams = req.nextUrl.searchParams;
   
@@ -41,13 +42,14 @@ export async function GET(
 
 export async function POST(
   req: NextRequest,
-  { params }: { params: Promise<{ path: string[] }> }
+  { params }: { params: any }
 ) {
   if (!WC_API_URL || !WC_CONSUMER_KEY || !WC_CONSUMER_SECRET) {
     return NextResponse.json({ error: "WooCommerce API not configured" }, { status: 500 });
   }
 
-  const { path } = await params;
+  const resolvedParams = await params;
+  const path = resolvedParams.path as string[];
   const endpoint = path.join("/");
   const url = new URL(`${WC_API_URL}/${endpoint}`);
   url.searchParams.set("consumer_key", WC_CONSUMER_KEY);
