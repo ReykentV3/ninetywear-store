@@ -82,6 +82,8 @@ export interface CartItem {
   color: string;
   qty: number;
   slug: string;
+  /** WooCommerce Store API item key for sync */
+  cartKey?: string;
 }
 
 /** Product list query parameters */
