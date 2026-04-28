@@ -9,7 +9,7 @@ import { wcFetch } from "@/services/woocommerce/client";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 // PayPal Sandbox Client ID (Replace with real one later)
-const PAYPAL_CLIENT_ID = "test"; // Using 'test' for sandbox by default or your real one if available
+const PAYPAL_CLIENT_ID = "Aen8OtPD1Xqo7PqhAggNVC2uhrSBd8Sc7jgU4qCRy6afUe83W_wFOG1Chkk9pdVDVPfKPr__WcB4DuGh";
 
 export default function CheckoutPage() {
   const { items, getSubtotal, clearCart } = useCartStore();
