@@ -1,3 +1,11 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { useCartStore } from "@/store/cartStore";
+import Image from "next/image";
+import Link from "next/link";
+import { Activity, CheckCircle, CreditCard, ChevronRight, Loader2, ExternalLink } from "lucide-react";
+import { wcFetch } from "@/services/woocommerce/client";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 // PayPal Sandbox Client ID (Replace with real one later)
