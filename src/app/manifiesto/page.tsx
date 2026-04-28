@@ -4,7 +4,8 @@ import { Activity, AlertTriangle, Cpu, Zap, Radio } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export default function Manifiesto() {
+// Force rebuild v3
+export default function ManifiestoPage() {
   return (
     <div className="min-h-screen pt-40 pb-24 px-6 md:px-12 max-w-5xl mx-auto font-mono text-bone transition-colors duration-500">
       
