@@ -221,7 +221,7 @@ export default function CheckoutPage() {
                   
                   <div className="space-y-6 mb-8 max-h-[300px] overflow-y-auto pr-4 custom-scrollbar">
                     {items.map((item) => (
-                      <div key={`${item.productId}-${item.variationId}-${item.size}`} className="flex gap-4 border-b border-ash/10 pb-4">
+                      <div key={'item-' + item.productId + '-' + (item.variationId || 0)} className="flex gap-4 border-b border-ash/10 pb-4">
                         <div className="relative w-16 h-20 flex-shrink-0 bg-void border border-bone/20">
                           <img src={item.image} alt={item.name} className="w-full h-full object-cover grayscale brightness-75" />
                         </div>
