@@ -283,6 +283,7 @@ export default function CheckoutPage() {
                               purchase_units: [
                                 {
                                   amount: {
+                                    currency_code: 'USD',
                                     value: (total / 3.7).toFixed(2), // Convert to USD for sandbox test
                                   },
                                 },
