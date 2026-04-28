@@ -111,7 +111,7 @@ export default function CheckoutPage() {
   };
 
   return (
-    <PayPalScriptProvider options={{ "client-id": PAYPAL_CLIENT_ID, currency: "USD" }}>
+    <PayPalScriptProvider options={{ clientId: PAYPAL_CLIENT_ID, currency: "USD" }}>
       <div className="min-h-screen pt-32 pb-20 px-4 md:px-8 bg-void text-bone font-mono transition-colors duration-500 selection:bg-magenta selection:text-white">
         <div className="max-w-7xl mx-auto">
           
